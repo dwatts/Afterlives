@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+@font-face {
+  font-family: 'MartinDisplayBold';
+  src: url('../assets/fonts/VTCMartinDisplay-XBold.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'MartinDisplayBoldForward';
+  src: url('../assets/fonts/VTCMartinDisplay-XBoldForward.woff2') format('woff2'),
+}
+
 :root {
   --Anton: "Anton", sans-serif;
   --Antonio: "Antonio", sans-serif;
@@ -27,6 +37,216 @@
     font-family: var(--Anton)
 }
 
+/*Splash Page*/
+
+.splash-container {
+    background-image: url("../assets/images/Hunger_Wall.JPG");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-inner {
+    width: 50rem;
+    height: auto;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.splash-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25rem;
+}
+
+.splash-title img {
+    height: 2.3rem;
+    -webkit-filter: drop-shadow(.5rem .5rem .5rem #000);
+    filter: drop-shadow(.5rem .5rem .5rem #000);
+}
+
+.splash-title-text {
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+}
+
+.splash-title-text p:nth-of-type(1) {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: var(--Anton);
+    letter-spacing: .15rem;
+}
+
+.splash-title-text p:nth-of-type(2) {
+    font-weight: 100;
+    font-size: 1.5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: var(--Antonio);
+    padding-left:.5rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin-bottom: 1.08rem;
+}
+
+/*Adjust splash paragraph text font weight*/
+
+.splash-inner p {
+    font-weight: 500 !important;
+}
+
+/*End font weight adjustment*/
+
+.splash-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:2rem;
+    width:10rem;
+    border-radius: .5rem;
+    background-color: var(--Dark-Brown);
+    transition: all .3s;
+    z-index: 2;
+    border:none;
+    color: #fff;
+    font-family: var(--Bodoni);
+    font-size: .8rem;
+    /* margin: 1rem 0; */
+}
+
+.splash-btn:hover {
+    background-color: var(--Background);
+    transform: translateY(-0.05rem);
+}
+
+/* Splash fonts */
+
+.splash-inner h3 {
+    color: var(--Dark-Brown);
+    letter-spacing: .15rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.splash-inner p {
+    font-family: var(--Bodoni);
+    font-size: .9rem;
+    color: var(--Dark-Brown);
+    margin: .75rem 0;
+    font-weight: 400;
+    line-height: 1.35rem;
+    letter-spacing: .02rem;
+}
+
+/*End Splash Page*/
+
+/*Navbar*/
+
+.navbar {
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 5rem rgb(0, 0, 0, 0.3);
+}
+
+.logo-title {
+    transition: transform 0.3s;
+}
+
+.logo-title:hover {
+    transform: translateY(-0.06rem);
+}
+
+.logo-title a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3rem;
+    width: 30rem;
+}
+
+.logo-title img {
+    height: 2.3rem;
+    -webkit-filter: drop-shadow(.5rem .5rem .5rem #000);
+    filter: drop-shadow(.5rem .5rem .5rem #000);
+}
+
+.navbar a p {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    letter-spacing: .05rem;
+    display: flex;
+    align-items: center;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+}
+
+.navbar a span {
+    /* text-transform: uppercase; */
+    font-weight: 200;
+    font-size: 1.8rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: var(--Antonio);
+    /* letter-spacing: .1rem; */
+    padding-left: .7rem;
+    padding-bottom: .25rem;
+}
+
+.nav-items {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-right: 3rem;
+}
+
+.nav-item {
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    transform: translateY(-0.09rem);
+}
+
+.nav-link {
+    font-family: var(--Bodoni);
+    color: var(--Dark-Brown);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: color 0.3s;
+}
+
+/*End Navbar*/
+
 .background {
   height: 100vh;
   width: 100%;
@@ -42,6 +262,7 @@
 }
 
 .container {
+  margin-top: 3.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   grid-template-rows: auto auto;        /* two rows */
