@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Oswald:wght@100..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --Anton: "Anton", sans-serif;
+  --Antonio: "Antonio", sans-serif;
+  --Bodoni:"Lato", sans-serif;
+  --Oswald: "Oswald", sans-serif;
+  --Background: rgba(170, 138, 82, 0.95);
+  --Background-Alt: rgba(216, 182, 125, 0.95);
+  --Background-Blue: rgba(100, 155, 146, 0.9);
+  --Background-Blue-Alt: rgba(141, 211, 199, 0.9);
+  --Background-Blue-Dark: rgba(72, 120, 112, 0.9);
+  --Maroon: #730900;
+  --Dark-Brown: #402e32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: var(--Anton)
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  background: var(--Dark-Brown);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: auto auto;        /* two rows */
+  width: 80%;
+}
+
+.cell {
+  height: auto;
+  margin: .1rem;
+  position: relative;
+}
+
+.cell h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px black;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .25rem;    
+}
+
+.cell:not(:last-of-type) {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cell:not(:last-of-type):hover {
+  transform: translateY(-0.2rem);
+  opacity: 0.9;
+  box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+}
+
+.cell:not(:last-of-type):hover h3 {
+  opacity: 1;
+}
+
+.bottom {
+  grid-column: 1 / 5;
+}
