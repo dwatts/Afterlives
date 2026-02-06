@@ -316,3 +316,28 @@
 .bottom {
   grid-column: 1 / 5;
 }
+
+/* Input Section */
+
+.map-container {
+    width: 60%;
+    height: 40rem;
+    background-color: var(--Background);
+    /* margin-top: 10rem; */
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.map-container p {
+    font-family: var(--Bodoni);
+    padding: 1rem 0;
+}
+
+#viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 20rem;
+      width: 100%;
+      z-index: 3;
+      background-color: white;
+}
