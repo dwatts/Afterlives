@@ -263,7 +263,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   grid-template-rows: auto auto;        /* two rows */
-  width: 80%;
+  width: 97%;
 }
 
 .cell {
