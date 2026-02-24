@@ -39,21 +39,45 @@
     </nav>
     <!--End Navbar-->
 
-    <div class="background">
-        <div class="map-container">
-            <h3>Provide Feedback</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam asperiores quia vel temporibus, ducimus, ex, natus omnis incidunt esse eveniet doloribus fugit cumque labore quasi. Et necessitatibus eius doloribus.
-            Facere expedita iste quae commodi at veritatis nam soluta vel libero autem dolore atque ad dolorem repellendus, iure sed voluptatem officiis laudantium! Vero, placeat esse voluptatibus ut fugit perspiciatis assumenda.
-            Possimus quia non soluta autem accusamus nemo, consequuntur expedita exercitationem repellendus assumenda, pariatur voluptatem qui nisi inventore nostrum sunt nulla doloremque delectus fugiat porro reiciendis eligendi. Ex obcaecati facere minus.
-            Dolorum alias iure aperiam voluptatibus, et odit iste deleniti architecto perferendis minus voluptates, similique recusandae voluptate itaque maiores doloremque provident magnam, expedita a facilis repellendus consequuntur! Dolorum cum ipsum dolorem.
-            Dolorem quod maxime, minima perspiciatis consequatur unde magnam recusandae autem impedit obcaecati, odit iste necessitatibus eius expedita, neque aspernatur quasi. Voluptatibus sequi laborum vitae ex ipsa repellat provident. Nisi, ab.</p>
-            <div id="viewDiv"></div>
+    <section class="section-one">
+        <div class="flex-wrapper">
+            <div class="text-column">
+                <h3>This is a Title</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam asperiores quia vel temporibus, ducimus, ex, natus omnis incidunt esse eveniet doloribus fugit cumque labore quasi. Et necessitatibus eius doloribus.
+                </p>
+                <p>
+                    Facere expedita iste quae commodi at veritatis nam soluta vel libero autem dolore atque ad dolorem repellendus, iure sed voluptatem officiis laudantium! Vero, placeat esse voluptatibus ut fugit perspiciatis assumenda. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam asperiores quia vel temporibus, ducimus, ex, natus omnis incidunt esse eveniet doloribus fugit cumque labore quasi. Et necessitatibus eius doloribus.
+                </p>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta magnam asperiores quia vel temporibus, ducimus, ex, natus omnis incidunt esse eveniet doloribus fugit cumque labore quasi. Et necessitatibus eius doloribus.
+                </p>
+            </div>
+            <div class="image-column">
+                <img src="./assets/images/cityhall/Cityhall_One.png" alt="Ralph Abernathy and Jesse Jackson speak in front of City Hall">
+                <img src="./assets/images/cityhall/Cityhall_Two.JPG" alt="Two people standing in front of City Hall">
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section-two">
+        <div class="container">
+            <div class="slider-container" id="container">
+                <img src="./assets/images/sliders/CityHall_Then.jpg" class="after-image" alt="After">
+                <img src="./assets/images/sliders/CityHall_Now.png" class="before-image" id="before" alt="Before">
+                <div class="slider-line" id="slider"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-three">
+        <div class="container">
+            <iframe class="padlet" src="https://padlet.com/cpcrspenn/national-mall-map-y8d7zm9kv0gdhr00" title="description"></iframe>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://js.arcgis.com/4.32/"></script>
-    <script src="map.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

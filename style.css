@@ -169,7 +169,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 4;
     background: linear-gradient(var(--Background), var(--Background-Alt));
     display: flex;
     align-items: center;
@@ -244,6 +244,8 @@
 
 /*End Navbar*/
 
+/* Hunger Wall Main Page */
+
 .background {
   height: 100vh;
   width: 100%;
@@ -261,8 +263,8 @@
 .container {
   margin-top: 3.5rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  grid-template-rows: auto auto;        /* two rows */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: auto auto;       
   width: 97%;
 }
 
@@ -317,13 +319,126 @@
   grid-column: 1 / 5;
 }
 
+/******************************/
+
+/* Input Page */
+
+/******************************/
+
+/* Section One */
+
+.section-one {
+    height: 120vh;
+    width: 100%;
+    background-color: var(--Dark-Brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrapper {
+    margin-top: 6rem; 
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50rem;
+}
+
+.text-column {
+    flex: 0 0 35%;
+    padding-right: 2rem;
+}
+
+.image-column {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-column h3 {
+    color: var(--Background);
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.text-column p {
+    font-family: var(--Bodoni);
+    font-size: 1rem;
+    color: var(--Background);
+    margin: .75rem 0;
+    font-weight: 400;
+    line-height: 1.35rem;
+    letter-spacing: .02rem;
+    cursor: default;
+}
+
+.image-column img:first-of-type {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 45rem;
+    border-radius: .5rem;
+    z-index: 2;
+    box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+}
+
+.image-column img:last-of-type {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 33rem;
+    border-radius: .5rem;
+    z-index: 3;
+    box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+}
+
+/* Section Two */
+
+.section-two {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Background-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Three */
+
+.section-three {
+    height: 150vh;
+    width: 100%;
+    background-color: var(--Dark-Brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-two .container,
+.section-three .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    /* padding-top: 3rem; */
+    height: 50rem;
+}
+
 /* Input Section */
 
 .map-container {
-    width: 60%;
-    height: 40rem;
-    background-color: var(--Background);
-    /* margin-top: 10rem; */
+    width: 70%;
+    height: auto;
+    background-color: rgba(170, 138, 82, 0.95);
+    box-shadow: 0 0 10px 10px rgba(170, 138, 82, 0.95); /* horizontal-offset vertical-offset blur-radius spread-radius color */
+    margin: 10px; /* Add margin to allow the shadow to be visible */
     padding: 2rem;
     border-radius: .5rem;
 }
@@ -333,11 +448,69 @@
     padding: 1rem 0;
 }
 
-#viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 20rem;
-      width: 100%;
-      z-index: 3;
-      background-color: white;
+.padlet {
+    width: 100%;
+    height: 50rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 }
+
+/* Before / After Photo Slider */
+
+.slider-container {
+    position: relative;
+    /* max-width: 95%; */
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+  }
+
+  .slider-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .after-image {
+    z-index: 1;
+  }
+
+  .before-image {
+    z-index: 2;
+    clip-path: inset(0 50% 0 0); /* start at 50% */
+  }
+
+  .slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: var(--Background);
+    z-index: 3;
+    transform: translateX(-50%);
+    cursor: ew-resize;
+  }
+
+  .slider-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--Background);
+    border: 2px solid var(--Dark-Brown);
+  }
