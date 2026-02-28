@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Oswald:wght@100..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+  font-family: 'MartinDisplayBold';
+  src: url('../assets/fonts/VTCMartinDisplay-XBold.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'MartinDisplayBoldForward';
+  src: url('../assets/fonts/VTCMartinDisplay-XBoldForward.woff2') format('woff2'),
+}
+
+:root {
+  --Anton: "Anton", sans-serif;
+  --Antonio: "Antonio", sans-serif;
+  --Bodoni:"Lato", sans-serif;
+  --Oswald: "Oswald", sans-serif;
+  --Background: rgba(170, 138, 82, 0.95);
+  --Background-Alt: rgba(216, 182, 125, 0.95);
+  --Background-Blue: rgba(100, 155, 146, 0.9);
+  --Background-Blue-Alt: rgba(141, 211, 199, 0.9);
+  --Background-Blue-Dark: rgba(72, 120, 112, 0.9);
+  --Maroon: #730900;
+  --Dark-Brown: #402e32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: var(--Anton)
+}
+
+/*Splash Page*/
+
+.splash-container {
+    background-image: url("../assets/images/Hunger_Wall.JPG");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    position: absolute;
+    display: none;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.splash-close {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1rem 5rem rgb(0, 0, 0, 0.3);
+    transition: all .3s;
+}
+
+.splash-close:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid var(--Dark-Brown);
+  animation: pulse 1.5s infinite;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.splash-close:hover::after {
+    opacity: 0.8;
+    transform: translateY(-0.05rem);
+}
+
+.splash-close p {
+    font-size: 1.5rem;
+    color: var(--Dark-Brown)
+}
+
+.splash-close:hover {
+    background-color: var(--Background);
+    opacity: 0.8;
+    transform: translateY(-0.05rem);
+}
+
+/* .splash-inner {
+    width: 50rem;
+    height: auto;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    padding: 1.5rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.splash-title {
+    display: flex;
+    align-items: center;
+}
+
+.splash-title img {
+    height: 2.3rem;
+    -webkit-filter: drop-shadow(.5rem .5rem .5rem #000);
+    filter: drop-shadow(.5rem .5rem .5rem #000);
+    margin-right: 1.5rem;
+}
+
+.splash-inner .splash-title p {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.95rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+}
+
+.splash-inner .splash-title span {
+    font-weight: 200;
+    font-size: 1.6rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: var(--Antonio);
+    padding-left:.5rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+} */
+
+/*Adjust splash paragraph text font weight*/
+
+/* .splash-inner p {
+    font-weight: 500 !important;
+} */
+
+/*End font weight adjustment*/
+
+.splash-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:2rem;
+    width:10rem;
+    border-radius: .5rem;
+    background-color: var(--Dark-Brown);
+    transition: all .3s;
+    z-index: 2;
+    border:none;
+    color: #fff;
+    font-family: var(--Bodoni);
+    font-size: .8rem;
+    /* margin: 1rem 0; */
+}
+
+.splash-btn:hover {
+    background-color: var(--Background);
+    transform: translateY(-0.05rem);
+}
+
+/* Splash fonts */
+
+.panel-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--Maroon);
+    margin: .5rem 0;
+    opacity: 0.7;
+    border-radius: 99px;
+}
+
+.splash-inner h3 {
+    color: var(--Dark-Brown);
+    letter-spacing: .15rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.splash-inner p {
+    font-family: var(--Bodoni);
+    font-size: 1rem;
+    color: var(--Dark-Brown);
+    margin: .75rem 0;
+    font-weight: 400;
+    line-height: 1.35rem;
+    letter-spacing: .02rem;
+    cursor: default;
+}
+
+/*End Splash Page*/
+
+/*Navbar*/
+
+.navbar {
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1rem 5rem rgb(0, 0, 0, 0.3);
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3rem;
+}
+
+.logo-title img {
+    height: 2.3rem;
+    -webkit-filter: drop-shadow(.5rem .5rem .5rem #000);
+    filter: drop-shadow(.5rem .5rem .5rem #000);
+    margin-right: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.logo-title img:hover {
+    transform: translateY(-0.06rem);
+}
+
+.navbar p {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.35rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    letter-spacing: .05rem;
+    cursor: default;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+}
+
+.navbar span {
+    font-weight: 200;
+    font-size: 1.9rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--Dark-Brown);
+    font-family: var(--Antonio);
+    padding-left: .7rem;
+}
+
+.nav-items {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-right: 3rem;
+}
+
+.nav-item {
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    transform: translateY(-0.09rem);
+}
+
+.nav-link {
+    font-family: var(--Bodoni);
+    color: var(--Dark-Brown);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: color 0.3s;
+}
+
+/*End Navbar*/
+
+/* Hunger Wall Main Page */
+
+.background {
+  height: 100vh;
+  width: 100%;
+  background: var(--Dark-Brown);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: auto auto;       
+  width: 97%;
+}
+
+.cell {
+  height: auto;
+  margin: .1rem;
+  position: relative;
+}
+
+.cell h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1.6rem;
+  text-shadow: 0 0 8px black;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s;
+  /* font-family: 'MartinDisplayBold', Fallback, sans-serif; */
+  font-family: var(--Anton);
+  letter-spacing: .06rem;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .25rem;    
+}
+
+.cell:not(:last-of-type) {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cell:not(:last-of-type):hover {
+  transform: translateY(-0.2rem);
+  opacity: 0.9;
+  box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+}
+
+.cell:not(:last-of-type):hover h3 {
+  opacity: 1;
+}
+
+.bottom {
+  grid-column: 1 / 5;
+}
+
+/* Input Section */
+
+.map-container {
+    width: 70%;
+    height: auto;
+    background-color: rgba(170, 138, 82, 0.95);
+    box-shadow: 0 0 10px 10px rgba(170, 138, 82, 0.95); /* horizontal-offset vertical-offset blur-radius spread-radius color */
+    margin: 10px; /* Add margin to allow the shadow to be visible */
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.map-container p {
+    font-family: var(--Bodoni);
+    padding: 1rem 0;
+}
+
+.padlet {
+    width: 100%;
+    height: 50rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+
+
+
+  /***Image Modal***/
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    position: fixed;
+    display: none;
+}
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 50rem;
+    max-height: 85vh;
+    background: linear-gradient(var(--Background), var(--Background-Alt));
+    padding: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.modal-close {
+    color: var(--Dark-Brown);
+    font-size: 1.5rem;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    transform: translateY(-0.09rem);
+    color: var(--Background-Blue) 
+}
+
+.modal-inner img {
+    max-width: 100%;
+    max-height: calc(80vh - 5rem);
+    height: auto;
+    width: auto;
+    object-fit:cover;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+}
+
+.modal-transcript-text {
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+}
+
+#img-caption {
+    font-family: var(--Bodoni);
+    font-size: .65rem;
+    color: var(--Dark-Brown);
+    margin: .75rem 0;
+    font-weight: 400;
+    line-height: 1.35rem;
+    letter-spacing: .02rem;
+    cursor: default;
+    width: 100%;
+}
+/***End About Modal***/
+
+/*Pulse animation for Splash Page Close Button*/
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}

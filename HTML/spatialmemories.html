@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afterlives</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="../CSS/spatialmemories.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="logo-title">
+            <a href="index.html">
+                <img src="../assets/icons/Tent_Icon.png" alt="">
+            </a>
+            <p>Resurrection City<span>Afterlives</span></p>
+        </div>
+
+        <ul class="nav-items">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Imagining</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Planning & Building</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Living & Leaving</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Afterlives</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+        </ul>
+    </nav>
+    <!--End Navbar-->
+
+    <section class="section-one">
+        <div class="flex-wrapper">
+            <img class="app-image" src="../assets/images/memories/memories.jpg" alt="">
+            <h1>Mapping Memory</h1>
+            <h2>Spatial Exploration of a Temporary Place</h2>
+            <div class="text-block">
+                <p>How do we remember what is not there? Remembering and preserving histories of protest is an ongoing act of resistance. When Resurrection City was deconstructed, the legacy of the Poor People's Campaign carried on, but no longer in the physical embodiment of a functioning city. Use the digital map and archival photo slider below to reflect upon the lasting impact of Resurrection City and how knowing its history can impact your understanding on the present-day cultural landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-two">
+        <div class="flex-wrapper">
+            <iframe class="padlet" src="https://padlet.com/cpcrspenn/national-mall-map-y8d7zm9kv0gdhr00" title="description"></iframe>
+        </div>
+    </section>
+
+    <section class="section-three">
+        <div class="flex-wrapper">
+            <!-- City Hall -->
+
+            <div class="slider-container" id="container">
+                <img src="../assets/images/sliders/CityHall_Then.jpg" class="after-image" alt="After">
+                <img src="../assets/images/sliders/CityHall_Now.png" class="before-image" id="before" alt="Before">
+                <div class="slider-line" id="slider"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Image Modal-->
+
+    <div class="modal-container" id="img-modal">
+        <div class="modal-inner">
+            <a href="#" class="modal-close" id="img-close">
+                <i class="fa-solid fa-close"></i>
+            </a>
+            <img id="neatModalImg" src="" alt="" data="">
+            <span id="img-caption"></span>
+        </div>
+    </div>
+
+    <!--End Image Modal-->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
+
+
+
