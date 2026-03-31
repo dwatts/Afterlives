@@ -96,62 +96,39 @@ window.addEventListener("touchmove", e => {
   updateSlider(e.touches[0].clientX);
 });
 
-/* Scroll Trigger Actions */
+/***Before / After Image Slider 2***/
 
-gsap.registerPlugin(ScrollTrigger);
+const container_two = document.getElementById('container_two');
+const before_two = document.getElementById('before_two');
+const slider_two = document.getElementById('slider_two');
 
-gsap.to(".section-one .image-caption", {
-  xPercent: 15,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section-two",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
+let dragging_two = false;
+
+function updateSliderTwo(x) {
+  const rect_two = container_two.getBoundingClientRect();
+  let offset_two = x - rect_two.left;
+
+  offset_two = Math.max(0, Math.min(offset_two, rect_two.width));
+  const percent_two = (offset_two / rect_two.width) * 100;
+
+  before_two.style.clipPath = `inset(0 ${100 - percent_two}% 0 0)`;
+  slider_two.style.left = percent_two + "%";
+}
+
+slider_two.addEventListener("mousedown", () => dragging_two = true);
+window.addEventListener("mouseup", () => dragging_two = false);
+window.addEventListener("mousemove", e => {
+  if (!dragging_two) return;
+  updateSliderTwo(e.clientX);
+});
+
+// Touch support
+slider_two.addEventListener("touchstart", () => dragging_two = true);
+window.addEventListener("touchend", () => dragging_two = false);
+window.addEventListener("touchmove", e => {
+  if (!dragging_two) return;
+  updateSliderTwo(e.touches[0].clientX);
 });
 
 
-gsap.to(".section-two .image-caption", {
-  xPercent: 15,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section-two",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-});
 
-gsap.to(".section-three .image-caption", {
-  xPercent: 15,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section-three",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-});
-
-gsap.to(".section-five .image-caption", {
-  xPercent: -10,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section-four",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-});
-
-gsap.to(".section-seven .image-caption", {
-  xPercent: 10,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".section-seven",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-});

@@ -16,11 +16,11 @@
 
 .text-column p {
     font-family: var(--Bodoni);
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;
-    line-height: 1.35rem;
+    line-height: 1.5rem;
     letter-spacing: .02rem;
     cursor: default;
 }
@@ -54,8 +54,6 @@
     letter-spacing: .02rem;
 }
 
-
-
 /* Section Title */
 
 .section-title {
@@ -71,7 +69,7 @@
 .section-title h1 {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
     color: #fff;
     font-family: 'MartinDisplayBold', Fallback, sans-serif;
@@ -119,7 +117,7 @@
 
 .section-one .image-column p {
     font-family: var(--Bodoni);
-    font-size: .75rem;
+    font-size: .8rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;
@@ -168,7 +166,7 @@
 
 .section-two .image-column p {
     font-family: var(--Bodoni);
-    font-size: .75rem;
+    font-size: .8rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;
@@ -234,7 +232,7 @@
 
 .section-three .image-column p {
     font-family: var(--Bodoni);
-    font-size: .75rem;
+    font-size: .8rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;
@@ -299,7 +297,7 @@
 
 .section-five .image-column p {
     font-family: var(--Bodoni);
-    font-size: .75rem;
+    font-size: .8rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;
@@ -356,7 +354,7 @@
 
 .section-seven .image-column p {
     font-family: var(--Bodoni);
-    font-size: .75rem;
+    font-size: .8rem;
     color: #fff;
     margin: .75rem 0;
     font-weight: 400;

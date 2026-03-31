@@ -10,14 +10,120 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     width: 50%;
+    height: 100%;
+}
+
+.flex-wrapper-wide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
     height: 100%;
 }
 
 /* Section One */
 
 .section-one {
+    height: 110vh;
+    width: 100%;
+    background-color: var(--Dark-Brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-img-holder {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.section-one img {
+    display: block;
+    width: 60rem;
+    border-radius: .5rem;
+    z-index: 2;
+    box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+}
+
+.section-one h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4.5rem;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: var(--Dark-Brown);
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+}
+
+.section-one h2 {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    font-size: 2rem;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: var(--Bodoni);
+    letter-spacing: .05rem;
+    text-align: center;
+}
+
+/* .section-one h2:nth-of-type(1){
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-one h2:nth-of-type(2),
+.section-one h2:nth-of-type(3) {   
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+} */
+
+
+
+/* Section Two */
+
+.section-two {
+    height: 70vh;
+    width: 100%;
+    background-color: var(--Dark-Brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-two .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1.5rem;
+}
+
+.section-two .text-block p {
+    font-family: var(--Bodoni);
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 1rem 0;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: .02rem;
+    cursor: default;
+}
+
+/* Section Three */
+
+.section-three{
     height: 130vh;
     width: 100%;
     background-color: var(--Dark-Brown);
@@ -26,17 +132,24 @@
     justify-content: center;
 }
 
-.section-one h1 {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 4rem;
-    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-family: 'MartinDisplayBold', Fallback, sans-serif;
-    letter-spacing: .05rem;
+.section-three .column-holder {
+    display: flex;
 }
 
-.section-one h2 {
+/* .section-three .column {
+    flex: 1;
+} */
+
+.section-three .column:first-child {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.section-three .column:last-child {
+    flex: 2;
+}
+
+.section-three .column h3 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2rem;
@@ -46,48 +159,25 @@
     letter-spacing: .05rem;
 }
 
-.section-one h2:nth-of-type(1){
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.section-one h2:nth-of-type(2),
-.section-one h2:nth-of-type(3) {   
-    margin-bottom: 1rem;
-    margin-top: 2.5rem;
-}
-
-.text-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin-top: 1.5rem;
-}
-
-.text-block p {
+.section-three .column p {
     font-family: var(--Bodoni);
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
-    margin: .5rem 0;
+    margin: 1rem 0rem;
     font-weight: 400;
-    line-height: 1.35rem;
+    line-height: 2rem;
     letter-spacing: .02rem;
     cursor: default;
 }
 
-.section-one img {
-    width: 40rem;
-    border-radius: .5rem;
-    z-index: 2;
-    box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
-    cursor: pointer;
-    margin-top: 10rem;
-    margin-bottom: 5rem;
+.section-three .column:first-child {
+    padding: 4rem;
+    margin: 4rem 0;
 }
 
-/* Section Two */
+/* Section Four */
 
-.section-two {
+.section-four {
     height: 100vh;
     width: 100%;
     background-color: var(--Dark-Brown);
@@ -96,15 +186,105 @@
     justify-content: center;
 }
 
-/* Section Three */
+.section-four h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+    text-align: center;
+}
 
-.section-three{
-    height: 100vh;
+/* Section Five */
+
+.section-five {
+    height: 110vh;
     width: 100%;
     background-color: var(--Dark-Brown);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.section-five .column-holder {
+    display: flex;
+}
+
+.section-five .column:first-child {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.section-five .column:last-child {
+    flex: 1;
+}
+
+.section-five .column:last-child h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+}
+
+.section-five .column:last-child p {
+    font-family: var(--Bodoni);
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 1rem 0;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: .02rem;
+    cursor: default;
+}
+
+/* Section Five */
+
+.section-six {
+    height: 110vh;
+    width: 100%;
+    background-color: var(--Dark-Brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-six .column-holder {
+    display: flex;
+}
+
+.section-six .column:first-child {
+    flex: 1;
+}
+
+.section-six .column:last-child {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.section-six .column:first-child h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+}
+
+.section-six .column:first-child p {
+    font-family: var(--Bodoni);
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 1rem 0;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: .02rem;
+    cursor: default;
 }
 
 /* Before / After Photo Slider */
@@ -166,3 +346,40 @@
     background: var(--Background);
     border: 2px solid var(--Dark-Brown);
   }
+
+  /***Bouncing Scroll Down Arrow***/
+
+.down-arrow {
+  position: fixed;
+  bottom: calc(100vh - 80px);
+  left: calc(50% - 14px);
+  margin: 0 auto;
+  text-align: center;
+  animation: jump 2.5s infinite;
+  z-index: 4;
+  transition: opacity 0.2s;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.down-arrow i {
+  font-size: 2.5rem;
+  transition: 0.3s ease-in-out;
+  color: var(--Background-Alt);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes jump {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 2rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
