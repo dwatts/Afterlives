@@ -198,6 +198,11 @@
     height: auto;
 }
 
+div[data-soundbite-token] {
+  width: 100%;
+  height: auto;
+}
+
 /* Section Five */
 
 .section-five {
