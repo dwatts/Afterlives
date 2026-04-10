@@ -73,14 +73,14 @@
 }
 
 .splash-close:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 5px solid var(--Dark-Brown);
-  animation: pulse 1.5s infinite;
-  z-index: -1;
-  transition: all .3s;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 5px solid var(--Dark-Brown);
+    animation: pulse 1.5s infinite;
+    z-index: -1;
+    transition: all .3s;
 }
 
 .splash-close:hover::after {
@@ -362,14 +362,30 @@
   grid-column: 1 / 5;
 }
 
+/* Attribution */
+
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.attribution p {
+    color: white;
+    font-family: var(--Antonio);
+    font-size:.75rem;
+    letter-spacing: .5px;
+    font-weight: 200;
+}
+
 /* Input Section */
 
 .map-container {
     width: 70%;
     height: auto;
     background-color: rgba(170, 138, 82, 0.95);
-    box-shadow: 0 0 10px 10px rgba(170, 138, 82, 0.95); /* horizontal-offset vertical-offset blur-radius spread-radius color */
-    margin: 10px; /* Add margin to allow the shadow to be visible */
+    box-shadow: 0 0 10px 10px rgba(170, 138, 82, 0.95);
+    margin: 10px;
     padding: 2rem;
     border-radius: .5rem;
 }
@@ -385,8 +401,6 @@
     border-radius: .5rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
 }
-
-
 
   /***Image Modal***/
 
