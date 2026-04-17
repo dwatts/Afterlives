@@ -1,10 +1,14 @@
 /******************************/
 
-/* Spatial Memories */
+/* Mapping Memories */
 
 /******************************/
 
 /* Common Styles */
+
+body {
+    background-color: var(--Dark-Brown) !important;
+}
 
 .flex-wrapper {
     display: flex;
@@ -24,15 +28,69 @@
     height: 100%;
 }
 
+/* Text Overlay */
+
+.text-overlay {
+  background-color: transparent;
+  position: relative;
+  z-index: 2; 
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+}
+
+#div-one {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-two {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-three {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-four {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-five {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-six {
+    height: 200vh;
+    background-color: transparent;
+}
+
 /* Section One */
 
 .section-one {
-    height: 110vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 1;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-one.hide {
+    opacity: 0;
 }
 
 .title-img-holder {
@@ -95,12 +153,24 @@
 /* Section Two */
 
 .section-two {
-    height: 70vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-two.show {
+    opacity: 1;
 }
 
 .section-two .text-block {
@@ -123,13 +193,24 @@
 
 /* Section Three */
 
-.section-three{
-    height: 130vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+.section-three {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-three.show {
+    opacity: 1;
 }
 
 .section-three .column-holder {
@@ -147,6 +228,7 @@
 
 .section-three .column:last-child {
     flex: 2;
+    z-index: 3;
 }
 
 .section-three .column h3 {
@@ -175,15 +257,50 @@
     margin: 4rem 0;
 }
 
+.map-container {
+    width: 70%;
+    height: auto;
+    background-color: rgba(170, 138, 82, 0.95);
+    box-shadow: 0 0 10px 10px rgba(170, 138, 82, 0.95);
+    margin: 10px;
+    padding: 2rem;
+    border-radius: .5rem;
+    z-index: 5;
+}
+
+.map-container p {
+    font-family: var(--Bodoni);
+    padding: 1rem 0;
+}
+
+.padlet {
+    width: 100%;
+    height: 45rem;
+    border-radius: .5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+}
+
 /* Section Four */
 
 .section-four {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-four.show {
+    opacity: 1;
 }
 
 .section-four h3 {
@@ -200,24 +317,43 @@
 /* Section Five */
 
 .section-five {
-    height: 110vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-five.show {
+    opacity: 1;
 }
 
 .section-five .column-holder {
     display: flex;
+    flex-direction: column;
 }
 
 .section-five .column:first-child {
     flex: 1;
-    padding-right: 2rem;
+    margin-bottom: 2rem;
 }
 
 .section-five .column:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.section-five .column:last-child > div {
     flex: 1;
 }
 
@@ -242,31 +378,50 @@
     cursor: default;
 }
 
-/* Section Five */
+/* Section Six */
 
 .section-six {
-    height: 110vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-six.show {
+    opacity: 1;
 }
 
 .section-six .column-holder {
     display: flex;
+    flex-direction: column;
 }
 
 .section-six .column:first-child {
     flex: 1;
+    margin-bottom: 2rem;
 }
 
 .section-six .column:last-child {
     flex: 1;
-    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
-.section-six .column:first-child h3 {
+.section-six .column:last-child > div {
+    flex: 1;
+}
+
+.section-six .column:last-child h3 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2rem;
@@ -276,7 +431,7 @@
     letter-spacing: .05rem;
 }
 
-.section-six .column:first-child p {
+.section-six .column:last-child p {
     font-family: var(--Bodoni);
     font-size: 1.1rem;
     color: #fff;
@@ -294,9 +449,10 @@
     /* max-width: 95%; */
     overflow: hidden;
     width: 100%;
-    height: 600px;
+    height: 500px;
     border-radius: 0.5rem;
     box-shadow: rgba(255, 255, 255, 0.2) 0rem .5rem 2rem;
+    z-index: 999;
   }
 
   .slider-container img {
@@ -347,7 +503,7 @@
     border: 2px solid var(--Dark-Brown);
   }
 
-  /***Bouncing Scroll Down Arrow***/
+/***Bouncing Scroll Down Arrow***/
 
 .down-arrow {
   position: fixed;
@@ -356,8 +512,9 @@
   margin: 0 auto;
   text-align: center;
   animation: jump 2.5s infinite;
-  z-index: 4;
+  z-index: 10;
   transition: opacity 0.2s;
+  opacity: 1;
 }
 
 .hide {
@@ -366,11 +523,13 @@
 }
 
 .down-arrow i {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   transition: 0.3s ease-in-out;
   color: var(--Background-Alt);
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
+
+/* Jumping animation for scroll down arrow */
 
 @keyframes jump {
   0% {

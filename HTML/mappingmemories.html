@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afterlives</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="../CSS/mappingmemories.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <div class="text-overlay">
+
+    <!--Navbar-->
+        <nav class="navbar">
+            <div class="logo-title">
+                <a href="../index.html">
+                    <img src="../assets/icons/Tent_Icon.png" alt="">
+                </a>
+                <p>Resurrection City<span>Afterlives</span></p>
+            </div>
+
+            <ul class="nav-items">
+                <li class="nav-item">
+                    <a href="https://dwatts.github.io/Caravan_Routes/" class="nav-link">Imagining</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://dwatts.github.io/RC_3D/" class="nav-link">Planning & Building</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://dwatts.github.io/Media_Coverage/" class="nav-link">Living & Leaving</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Afterlives</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul>
+        </nav>
+        <!--End Navbar-->
+
+        <div id="div-one"></div>
+        <div id="div-two"></div>
+        <div id="div-three"></div>
+        <div id="div-four"></div>
+        <div id="div-five"></div>
+        <div id="div-six"></div>
+
+        <div class="down-arrow">
+                <i class="fa-solid fa-arrow-down"></i>
+        </div>
+
+    </div>
+
+    <!-- Sections -->
+    
+    <section class="section-one">
+        <div class="flex-wrapper">
+            <div class="title-img-holder">
+                <img src="../assets/images/memories/memories.jpg" alt="">
+                <h1>Mapping Memory</h1>
+                <h2>Spatial Exploration of a Temporary Place</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-two">
+        <div class="flex-wrapper">
+            <div class="text-block">
+                <p>How do we remember what is not there? Remembering and preserving histories of protest is an ongoing act of resistance. When Resurrection City was deconstructed, the legacy of the Poor People's Campaign carried on, but no longer in the physical embodiment of a functioning city.</p><p>Use the digital map and archival photo slider below to reflect upon the lasting impact of Resurrection City and how knowing its history can impact your understanding on the present-day cultural landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-three">
+        <div class="flex-wrapper-wide">
+            <div class="column-holder">
+                <div class="column">
+                    <h3>Explore the present-day landscape in real-time</h3>
+                    <p>Add your comments, experiences, memories, or questions directly on the map <a href="https://padlet.com/cpcrspenn/national-mall-map-y8d7zm9kv0gdhr00">here.</a></p>
+                    <h3>Step 1:</h3>
+                    <p>Click the 'Post' icon in the  bottom right-hand corner of page. Search by name/address OR drag the box onto the desired plot point to add an entry to the map.</p>
+                    <h3>Step 2:</h3>
+                    <p>Add a title to your entry, and have the option to include images, notes, files, links, audio, and/or video recordings.</p> 
+                </div>
+                <div class="column">
+                    <iframe class="padlet" src="https://padlet.com/cpcrspenn/national-mall-map-y8d7zm9kv0gdhr00" title="description"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-four">
+        <div class="flex-wrapper">
+            <h3>Slide the cursor to view archival photographs against the current landscape of the National Mall. Consider the memories embedded in the land that have been lost to time.</h3>
+        </div>
+    </section>
+
+    <section class="section-five">
+        <div class="flex-wrapper-wide">
+            <div class="column-holder">
+                <div class="column">
+                    <div class="slider-container" id="container">
+                        <img src="../assets/images/sliders/CityHall_Now.png" class="after-image" alt="After">
+                        <img src="../assets/images/sliders/CityHall_Then.jpg" class="before-image" id="before" alt="Before">
+                        <div class="slider-line" id="slider"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <h3>CITY HALL</h3>
+                        <p>City Hall was an important base of operations: a centrally-located, well-constructed shelter with electricity and phone access where residents could organize for daily marches and lobbying efforts. Although much of the SCLC senior staff, including Abernathy, lived offsite at the nearby Pitt Motel, they spent most of their time onsite in City Hall.</p>
+                    </div>
+                    <div>
+                        <h3>Reflection Prompt:</h3>
+                        <p>City Hall represents a specific structure within Resurrection City which speaks to the site's broader use as a gathering space for civil rights. What's in a building? What can a place of civic decision-making feel like when designed for citizens, by citizens - even if just a temporary structure?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-six">
+        <div class="flex-wrapper-wide">
+            <div class="column-holder">
+                <div class="column">
+                    <div class="slider-container" id="container_two">
+                        <img src="../assets/images/sliders/Solidarity_Now.png" class="after-image" alt="After">
+                        <img src="../assets/images/sliders/Solidarity_Then.JPG" class="before-image" id="before_two" alt="Before">
+                        <div class="slider-line" id="slider_two"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <h3>SOLIDARITY DAY</h3>
+                        <p>On June 19th, 1968, over 50,000 people gathered in solidarity for working-class rights, culminating in a mass demonstration with songs, speakers, and prayer. This event was the peak of Resurrection City, helping promote the causes behind the movement and bring together civil rights activists and neighbors from across the country. A few days later, police flooded the settlement with tear gas, commencing the abandonment of the area and eventual deconstruction of the encampment.</p>
+                    </div>
+                    <div>
+                        <h3>Reflection Prompt:</h3>
+                        <p>Solidarity Day represents moment in space and time that highlights the culmination of labor, organizing, and visibility of Resurrection City within the built environment. The National Mall has been host to many protests, like Martin Luther King's March on Washington in 1963. What made Solidarity Day different? How did the settlement of Resurrection City create momentum for public demonstration and community organizing?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Image Modal-->
+
+    <div class="modal-container" id="img-modal">
+        <div class="modal-inner">
+            <a href="#" class="modal-close" id="img-close">
+                <i class="fa-solid fa-close"></i>
+            </a>
+            <img id="neatModalImg" src="" alt="" data="">
+            <span id="img-caption"></span>
+        </div>
+    </div>
+
+    <!--End Image Modal-->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="../JS/mappingmemories.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
+
+
+

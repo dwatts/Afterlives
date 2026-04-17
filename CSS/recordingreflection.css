@@ -6,6 +6,10 @@
 
 /* Common Styles */
 
+body {
+    background-color: var(--Dark-Brown) !important;
+}
+
 .flex-wrapper {
     display: flex;
     flex-direction: column;
@@ -24,15 +28,69 @@
     height: 100%;
 }
 
+/* Text Overlay */
+
+.text-overlay {
+  background-color: transparent;
+  position: relative;
+  z-index: 2; 
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+}
+
+#div-one {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-two {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-three {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-four {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-five {
+    height: 200vh;
+    background-color: transparent;
+}
+
+#div-six {
+    height: 200vh;
+    background-color: transparent;
+}
+
 /* Section One */
 
 .section-one {
-    height: 110vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 1;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-one.hide {
+    opacity: 0;
 }
 
 .title-img-holder {
@@ -84,17 +142,49 @@
     text-align: center;
 }
 
-/* Section Two, Three & Five */
+/* Section Two & Three */
 
-.section-two,
-.section-three {
-    height: 70vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+.section-two {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
 }
+
+.section-two.show {
+    opacity: 1;
+}
+
+.section-three {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-three.show {
+    opacity: 1;
+}
+
 
 .section-two .text-block,
 .section-three .text-block {
@@ -137,15 +227,25 @@
 
 /* Section Four */
 
-/* Section Three */
-
-.section-four{
-    height: 130vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+.section-four {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-four.show {
+    opacity: 1;
 }
 
 .section-four .column-holder {
@@ -206,12 +306,23 @@ div[data-soundbite-token] {
 /* Section Five */
 
 .section-five {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-five.show {
+    opacity: 1;
 }
 
 .section-five .text-block {
@@ -248,21 +359,37 @@ div[data-soundbite-token] {
 /* Section Six */
 
 .section-six {
-    height: 130vh;
-    width: 100%;
-    background-color: var(--Dark-Brown);
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-six.show {
+    opacity: 1;
 }
 
 .section-six .column-holder {
     display: flex;
     gap: 4rem;
+
 }
 
 .section-six .column {
     flex: 1;
+}
+
+.section-six .column:first-child {
+    z-index: 3;
 }
 
 .section-six .column h3 {
@@ -324,4 +451,44 @@ div[data-soundbite-token] {
 
 .section-six li a:hover {
     color: var(--Background);
+}
+
+/***Bouncing Scroll Down Arrow***/
+
+.down-arrow {
+  position: fixed;
+  bottom: calc(100vh - 80px);
+  left: calc(50% - 14px);
+  margin: 0 auto;
+  text-align: center;
+  animation: jump 2.5s infinite;
+  z-index: 10;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.down-arrow i {
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  color: var(--Background-Alt);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Jumping animation for scroll down arrow */
+
+@keyframes jump {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 2rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
 }
