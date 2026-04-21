@@ -191,6 +191,7 @@ body {
     cursor: default;
 }
 
+
 /* Section Three */
 
 .section-three {
@@ -215,15 +216,13 @@ body {
 
 .section-three .column-holder {
     display: flex;
+    
 }
-
-/* .section-three .column {
-    flex: 1;
-} */
 
 .section-three .column:first-child {
     flex: 1;
     padding-right: 2rem;
+
 }
 
 .section-three .column:last-child {
@@ -250,6 +249,25 @@ body {
     line-height: 2rem;
     letter-spacing: .02rem;
     cursor: default;
+}
+
+.section-three a {
+    font-family: var(--Bodoni);
+    color: var(--Background);
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color .3s;
+    letter-spacing: .02rem;
+    cursor: pointer;
+}
+
+.section-three a:hover {
+    color: var(--Background)
+}
+
+.link {
+    z-index: 10;
+    position: relative;
 }
 
 .section-three .column:first-child {

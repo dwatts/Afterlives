@@ -155,7 +155,6 @@ body {
     justify-content: center;
     height: 100vh;
     position: absolute;
-    z-index: 0;
     opacity: 0;
     transition: all 2s ease;
     margin-top: 2rem;
@@ -165,37 +164,14 @@ body {
     opacity: 1;
 }
 
-.section-three {
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: absolute;
-    opacity: 0;
-    transition: all 2s ease;
-    margin-top: 2rem;
-}
-
-.section-three.show {
-    opacity: 1;
-}
-
-
-.section-two .text-block,
-.section-three .text-block {
+.section-two .text-block {
     display: flex;
     flex-direction: column;
     justify-content: start;
     margin-top: 1.5rem;
 }
 
-.section-two .text-block h3,
-.section-three .text-block h3 {
+.section-two .text-block h3 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2rem;
@@ -223,6 +199,52 @@ body {
 
 .section-two .text-block span:hover {
     color: var(--Background-Alt)
+}
+
+.section-two .text-block:first-of-type {
+    z-index: 10;
+    position: relative;
+}
+
+/* Section Three */
+
+.section-three {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: all 2s ease;
+    margin-top: 2rem;
+}
+
+.section-three.show {
+    opacity: 1;
+}
+
+.section-three .text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1.5rem;
+}
+
+.section-three .text-block h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    text-shadow: 0rem 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'MartinDisplayBold', Fallback, sans-serif;
+    letter-spacing: .05rem;
+    text-align: center;
 }
 
 /* Section Four */

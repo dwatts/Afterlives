@@ -1,3 +1,13 @@
+const trigger = document.getElementById("scrollToBottom");
+const box = document.querySelector(".text-overlay");
+
+  trigger.addEventListener("click", function () {
+    box.scrollTo({
+      top: box.scrollHeight,
+      behavior: "smooth"
+    });
+  });
+
 //ScrollTrigger Script
 const downArrow = document.querySelector('.down-arrow');
 

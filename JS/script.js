@@ -1,12 +1,18 @@
 /***Start: Global code to send images on click to modal and launch***/
 
-$('.app-image').click(function (e) {
-  let location = $(e.target).attr('src')
-  let caption = $(e.target).attr('data-caption')
-  $('#neatModalImg').attr('src', location);
-  $('#img-modal').fadeIn(500);
-  $('#img-caption').html(caption);
-});
+// $('.app-image').click(function (e) {
+//   let location = $(e.target).attr('src')
+//   let caption = $(e.target).attr('data-caption')
+//   $('#neatModalImg').attr('src', location);
+//   $('#img-modal').fadeIn(500);
+//   $('#img-caption').html(caption);
+// });
+
+/***Trigger About Modal***/
+
+$('.nav-item:nth-of-type(5)').click(function () {
+  $('#about-modal').fadeIn(500);
+})
 
 //Close all modals
 
