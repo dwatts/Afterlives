@@ -158,6 +158,7 @@ body {
     opacity: 0;
     transition: all 2s ease;
     margin-top: 2rem;
+    z-index: 1;
 }
 
 .section-two.show {
@@ -169,6 +170,8 @@ body {
     flex-direction: column;
     justify-content: start;
     margin-top: 1.5rem;
+    z-index: 5;
+    position: relative;
 }
 
 .section-two .text-block h3 {
@@ -201,10 +204,10 @@ body {
     color: var(--Background-Alt)
 }
 
-.section-two .text-block:first-of-type {
+/* .section-two .text-block:first-of-type {
     z-index: 10;
     position: relative;
-}
+} */
 
 /* Section Three */
 
@@ -475,42 +478,3 @@ div[data-soundbite-token] {
     color: var(--Background);
 }
 
-/***Bouncing Scroll Down Arrow***/
-
-.down-arrow {
-  position: fixed;
-  bottom: calc(100vh - 80px);
-  left: calc(50% - 14px);
-  margin: 0 auto;
-  text-align: center;
-  animation: jump 2.5s infinite;
-  z-index: 10;
-  transition: opacity 0.2s;
-  opacity: 1;
-}
-
-.hide {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.down-arrow i {
-  font-size: 1.5rem;
-  transition: 0.3s ease-in-out;
-  color: var(--Background-Alt);
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-/* Jumping animation for scroll down arrow */
-
-@keyframes jump {
-  0% {
-    bottom: 1rem;
-  }
-  50% {
-    bottom: 2rem;
-  }
-  100% {
-    bottom: 1rem;
-  }
-}

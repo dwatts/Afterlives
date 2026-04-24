@@ -228,7 +228,7 @@ html, body {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 2;
     background: linear-gradient(var(--Background), var(--Background-Alt));
     display: flex;
     align-items: center;
@@ -299,6 +299,15 @@ html, body {
     font-size: 1.1rem;
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: color 0.3s;
+}
+
+.nav-link-inactive {
+    cursor: default;
+    font-family: var(--Bodoni);
+    color: var(--Dark-Brown);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 /*End Navbar*/
@@ -396,9 +405,218 @@ html, body {
     font-weight: 200;
 }
 
-/* Input Section */
+/***Bouncing Scroll Down Arrow***/
+
+.down-arrow {
+  position: fixed;
+  bottom: calc(100vh - 80px);
+  left: calc(50% - 14px);
+  margin: 0 auto;
+  text-align: center;
+  animation: jump 2.5s infinite;
+  z-index: 10;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.down-arrow i {
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  color: var(--Background-Alt);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Jumping animation for scroll down arrow */
+
+@keyframes jump {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 2rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+
+/***Home Icon***/
+
+.home-icon {
+  position: fixed;
+  top: 5rem;
+  left: 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 10;
+  opacity: 1;
+  
+}
+
+.home-icon i {
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  color: var(--Background-Alt);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.home-icon i:hover {
+    scale: 1.2;
+    opacity: .9;
+}
+
+/***Nav Modal***/
+
+.nav-modal-inner {
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(var(--Background-Blue), var(--Background-Blue-Alt));
+    padding: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    border-radius: .5rem;
+}
+
+.options-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.options-section h1 {
+  padding-bottom: 3rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: var(--Dark-Brown);
+  cursor: default;
+}
+
+.options-section-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  cursor: default;
+}
+
+.options-section-text span {
+  font-size: 1.2rem;
+  color: var(--Dark-Brown);
+  font-weight: 600;
+  font-family: var(--Bodoni);
+  color: white;
+  letter-spacing: .05rem;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  padding-top: 3rem;
+  height: auto;
+}
+
+.option-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  height: 20rem;
+}
+
+.option-wrapper span { 
+  color: #fff;
+  font-family: var(--Bodoni);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  letter-spacing: .05rem;
+  cursor: default;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.option {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 4px 15px -1px var(--Dark-Brown);
+  transition: transform 0.3s;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.option:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* .option > img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  position: absolute;
+  border-radius: inherit;
+  opacity: 0.5;
+} */
+
+.option a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative; /* important */
+}
+
+.option img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  opacity: 0.5;
+}
+
+.option h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  color: var(--Dark-Brown);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+  font-family: var(--Martin);
+}
 
 
+/***End Nav Modal***/
 
 /***Image Modal***/
 
@@ -421,7 +639,8 @@ html, body {
     /* width: auto;
     max-width: 50rem;
     max-height: 85vh; */
-    background: linear-gradient(var(--Background), var(--Background-Alt));
+    /* background: linear-gradient(var(--Background), var(--Background-Alt)); */
+    background: linear-gradient(var(--Background-Blue), var(--Background-Blue-Alt));
     padding: 1.5rem;
     position: absolute;
     top: 50%;
@@ -429,6 +648,7 @@ html, body {
     transform: translate(-50%, -50%);
     border-radius: .5rem;
     overflow: hidden;
+    z-index: 10;
 }
 
 .modal-close {
@@ -442,7 +662,7 @@ html, body {
 
 .modal-close:hover {
     transform: translateY(-0.09rem);
-    color: var(--Background-Blue) 
+    color: var(--Background) 
 }
 
 .modal-inner img {

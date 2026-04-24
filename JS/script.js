@@ -1,12 +1,8 @@
-/***Start: Global code to send images on click to modal and launch***/
+/***Trigger Nav Modal***/
 
-// $('.app-image').click(function (e) {
-//   let location = $(e.target).attr('src')
-//   let caption = $(e.target).attr('data-caption')
-//   $('#neatModalImg').attr('src', location);
-//   $('#img-modal').fadeIn(500);
-//   $('#img-caption').html(caption);
-// });
+$('.logo-title img').click(function () {
+  $('#nav-modal').fadeIn(500);
+})
 
 /***Trigger About Modal***/
 
@@ -16,10 +12,11 @@ $('.nav-item:nth-of-type(5)').click(function () {
 
 //Close all modals
 
-$('#about-close, #img-close').click(function (e) {
+$('#about-close, #nav-close, #img-close').click(function (e) {
     e.preventDefault();
     $('#img-modal').fadeOut(500);
     $('#about-modal').fadeOut(500);
+    $('#nav-modal').fadeOut(500);
 });
 
 /***Fade in Splash Screen on Load***/
